@@ -24,6 +24,10 @@
     background-color: #202020;
     border-radius: 20px;
   }
+
+  ul{
+    list-style: none;
+  }
 html {
   font-size: 16px;
 }
@@ -79,4 +83,10 @@ section{
   display: none;
   justify-content: space-around;
   align-items: center;
+}
+ul{
+  width: 100%;
+}
+.bar li{
+  height: 1rem;
 }

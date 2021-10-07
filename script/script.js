@@ -10,26 +10,23 @@ const populationChart = document.getElementById("populationChart")
 const populationNumber = document.getElementById("populationNumber")
 
 
-//user array
-let topPList=[]
-console.log(topPList.values())
 
-// console.log(xMax)
+let xValues = countries.map(function(o) { return o.population; }).sort((a,b) => b-a).slice(0,10);
 
+xValues.forEach((element,index) => {
+let populationFiltered =  countries.filter((function(o) { return o.population === xValues[index]; }))
 
-//Adding user to users array
-// const addData = function (list) {
-//   topPList.push(list);
-//   updateDom();
-// };
+populationFiltered.forEach((value,index)=>{
+   populationName.innerHTML =`<li>${value.name}</li>`
+   let width = 100 - ((value.population)/763165599)*100 
+   populationChart.innerHTML =`<li style="width:${width}%;background-color:red"></li>`
+   populationNumber.innerHTML =`<li>${value.population}</li>`
+   topPopulation.appendChild(populationNumber,populationChart,populationNumber);
 
-
-  let xValues = countries.map(function(o) { return o.population; });
-  let xMax = [...xValues].sort((a,b) => b-a).slice(0,10);
-  xMax.forEach((element,index) => {
-  const populationFiltered = countries.filter((function(o) { return o.population === xMax[index]; }))
-  topPList.push(element)
   });
+
+}); 
+
 
 
 
