@@ -10,16 +10,29 @@ const populationChart = document.getElementById("populationChart")
 const populationNumber = document.getElementById("populationNumber")
 
 
-let xValues = countries.map(function(o) { return o.population; });
-xValues = Array.from(countries, o => o.population);
+//user array
+let topPList=[]
+console.log(topPList.values())
 
-let xMax = [...xValues].sort((a,b) => b-a).slice(0,10)
 // console.log(xMax)
 
-xMax.forEach((element,index) => {
+
+//Adding user to users array
+// const addData = function (list) {
+//   topPList.push(list);
+//   updateDom();
+// };
+
+
+  let xValues = countries.map(function(o) { return o.population; });
+  let xMax = [...xValues].sort((a,b) => b-a).slice(0,10);
+  xMax.forEach((element,index) => {
   const populationFiltered = countries.filter((function(o) { return o.population === xMax[index]; }))
-console.log(populationFiltered)
-});
+  topPList.push(element)
+  });
+
+
+
 
 const showPopulation = function(){
   topPopulation.style.display="flex"
