@@ -5,38 +5,21 @@ const topPopulation = document.getElementById("population")
 const topLanguage = document.getElementById("language")
 const btnPopulation = document.getElementById("btnPopulation")
 const btnLanguage = document.getElementById("btnLanguage")
-
-// console.log(countries)
-
-
-const topList =  countries.filter(function(list){
-  if(true){
-    return list.name
-  }
-})
-// console.log(topList)
+const populationName = document.getElementById("populationName")
+const populationChart = document.getElementById("populationChart")
+const populationNumber = document.getElementById("populationNumber")
 
 
-const numberPopulation = countries.map(function(number,index){
-  return number.population
-})
-const numberPopulationList = (numberPopulation.sort(function(a, b) {
-  return b - a;
-}).slice(0,10))
-console.log(numberPopulationList)
+let xValues = countries.map(function(o) { return o.population; });
+xValues = Array.from(countries, o => o.population);
 
+let xMax = [...xValues].sort((a,b) => b-a).slice(0,10)
+// console.log(xMax)
 
-const namePopulation = countries.map(function(countries){
-  return countries
-})
-console.log(namePopulation)
-
-let namePopulationList = namePopulation.includes(numberPopulationList)
-
-console.log(namePopulationList)
-
-
-
+xMax.forEach((element,index) => {
+  const populationFiltered = countries.filter((function(o) { return o.population === xMax[index]; }))
+console.log(populationFiltered)
+});
 
 const showPopulation = function(){
   topPopulation.style.display="flex"
