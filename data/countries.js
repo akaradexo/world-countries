@@ -1,4 +1,4 @@
-const countries = [
+export const countries = [
   {
     name: 'Afghanistan',
     capital: 'Kabul',
@@ -2010,4 +2010,5 @@ const countries = [
     flag: 'https://restcountries.eu/data/zwe.svg',
     currency: 'Botswana pula',
   },
+  
 ];
