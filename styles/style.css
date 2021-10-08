@@ -46,6 +46,10 @@ section{
   width: 100%;
 
 }
+h1{
+  line-height: 0.5rem;
+  margin-top: 2rem;
+}
 .header{
   width: 90%;
   height: 15rem;
@@ -59,42 +63,121 @@ section{
   background-color: #fff;
   width: 100vw;
   text-align: center;
-  height: 4rem;
-  padding: 3rem;
+  height: 6rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 .buttonGroup{
-  margin: 0.5rem 0;
+  margin: 0.5rem 0rem;
+  display: flex;
+  
 }
 .container{
-  width:95%;
+  width:80%;
   display: flex;
+  margin: 2rem;
 }
 .population{
   width: 100%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .population ul{
   list-style: none;
   margin: 0.6rem 0;
   display: flex;
+  width: 100%;
   justify-content: space-between;
+
 }
 .population ul li{
   display: flex;
   align-items: flex-start!important;
   text-align: start;
+  font-size: 1.2rem;
 }
 .name{
-  width: 10rem;
+  width: 15rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .bar{
   height: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .numbers{
   width: 10rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 
+}
+.language{
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.language ul{
+  list-style: none;
+  margin: 0.6rem 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+}
+.language ul li{
+  display: flex;
+  align-items: flex-start!important;
+  text-align: start;
+  font-size: 1.2rem;
+}
+#populationInfo{
+}
+#languageInfo{
+  display: none;
+}
+
+
+
+/* CSS */
+.button-31 {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #222;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0.8rem;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.button-31:hover,
+.button-31:focus {
+  opacity: .75;
 }

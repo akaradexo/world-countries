@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/style.css">
+   <link rel="icon" type="image/png" sizes="32x32" href="./assests/world-globe.png">>
   
 </head>
 <body>
@@ -16,10 +17,12 @@
       <p>Currently, we have 250 countries</p>
       <div class="fluid">
         <div class="buttonGroup">
-          <button id="btnPopulation">POPULATION</button>
-          <button id = "btnLanguage">LANGUAGE</button>
+          <button id="btnPopulation" type="button" class="button-31" style="background-color: #ff6584;">POPULATION</button>
+          <button id = "btnLanguage" type="button" class="button-31" style="background-color: #6c63ff;">LANGUAGE</button>
         </div>
-        <p>10 most spoken language in the world</p>
+        <p id="populationInfo">10 Most populated Countries in the world</p>
+        <p id="languageInfo">10 Most spoken Language in the world</p>
+
       </div>
       <div class="container" >
         <div class="population " id="population">
